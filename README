@@ -1,0 +1,27 @@
+git clone the repo.
+
+1. webtizen -p --nocheck nfcSimple.wgt ../nfcSimple/ (creates package)
+2. webtizen -i -w nfcSimple.wgt (install to target)
+3. webtizen -r -i SweDLRJoMd.nfcSimple (appID) launches the app on device
+
+or after 1, 
+sdb push nfcSimple /home/developer
+
+sdb root on
+sdb shell
+then On device:
+wrt-install -i /home/developer/nfcSimple.wgt
+
+For debugging, 
+wrt-launcher -d -s SweDLRJoMd.nfcSimple 
+(-d is for debug mode)
+It will print a port number say 55219
+
+On host (ubuntu)
+sdb forward tcp:8888 tcp:55219
+
+then on chrome, goto localhost:8888
+open inspector, and debug :)
+
+
+

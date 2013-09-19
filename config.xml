@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/nfcSimple" version="1.0.0" viewmodes="maximized">
+	<tizen:app-control>
+		<tizen:src name="index.html"/>
+		<tizen:operation name="http://tizen.org/appcontrol/operation/nfc_empty_type"/>
+		<tizen:uri name=""/>
+		<tizen:mime name="*/*"/>
+	</tizen:app-control>
+	<tizen:app-control>
+		<tizen:src name="index.html"/>
+		<tizen:operation name="http://tizen.org/appcontrol/operation/nfc_well_known_type"/>
+		<tizen:uri name=""/>
+		<tizen:mime name="*/*"/>
+	</tizen:app-control>
+	<tizen:app-control>
+		<tizen:src name="index.html"/>
+		<tizen:operation name="http://tizen.org/appcontrol/operation/nfc_mime_type"/>
+		<tizen:uri name=""/>
+		<tizen:mime name="*/*"/>
+	</tizen:app-control>
+	<tizen:app-control>
+		<tizen:src name="index.html"/>
+		<tizen:operation name="http://tizen.org/appcontrol/operation/nfc_uri_type"/>
+		<tizen:uri name=""/>
+		<tizen:mime name="*/*"/>
+	</tizen:app-control>
     <tizen:application id="SweDLRJoMd.nfcSimple" package="SweDLRJoMd" required_version="2.1"/>
     <content src="index.html"/>
     <icon src="icon.png"/>
     <name>nfcSimple</name>
+	<tizen:privilege name="http://tizen.org/privilege/nfc.admin"/>
+	<tizen:privilege name="http://tizen.org/privilege/nfc.common"/>
+	<tizen:privilege name="http://tizen.org/privilege/nfc.tag"/>
+	<tizen:privilege name="http://tizen.org/privilege/nfc.p2p"/>
 </widget>
